@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8" />
+<title>jquery.formConfirm example</title>
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
+<link href="./formConfirm.css" rel="stylesheet">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+<script src="./jquery.formConfirm.js"></script>
+<script>
+$(function() {
+  $('.js-formConfirm').formConfirm({
+    'resetText'  : '修正',
+    'submitText' : '送信'
+  });
+});
+</script>
+</head>
+
+
+
+
+
+<body>
+  <div class="container">
+    <form class="js-formConfirm" action="#" method="post">
+      <div class="form-group">
+        <label>名前</label>
+        <input type="text" name="name" class="form-control" placeholder="名前を入力">
+      </div>
+
+      <div class="form-group">
+        <label>フリガナ</label>
+        <input type="text" name="kana" class="form-control" placeholder="フリガナを入力">
+      </div>
+
+      <div class="form-group">
+        <label>メール</label>
+        <input type="email" name="mail" class="form-control" placeholder="メールアドレスを入力">
+      </div>
+
+      <div class="form-group">
+        <label>セレクトボックス01
+          <select name="selectbox01">
+            <option value="選択肢1_１" selected>選択肢1_１</option>
+            <option value="選択肢1_２">選択肢1_２</option>
+            <option value="選択肢1_３">選択肢1_３</option>
+            <option value="選択肢1_４">選択肢1_４</option>
+            <option value="選択肢1_５">選択肢1_５</option>
+          </select>
+        </label>
+      </div>
+      <div class="form-group">
+        <label>セレクトボックス02
+          <select name="selectbox02">
+            <option value="選択肢2_１" selected>選択肢2_１</option>
+            <option value="選択肢2_２">選択肢2_２</option>
+            <option value="選択肢2_３">選択肢2_３</option>
+            <option value="選択肢2_４">選択肢2_４</option>
+            <option value="選択肢2_５">選択肢2_５</option>
+          </select>
+        </label>
+      </div>
+
+      <div class="form-group">
+        <h2 class="h4">ラジオボタン01</h2>
+        <label><input type="radio" name="radio01" value="ラジオボタン01_01" checked="checked">ラジオボタン01_01</label>
+        <label><input type="radio" name="radio01" value="ラジオボタン01_02">ラジオボタン01_02</label>
+        <label><input type="radio" name="radio01" value="ラジオボタン01_03">ラジオボタン01_03</label>
+      </div>
+      <div class="form-group">
+        <h2 class="h4">ラジオボタン02</h2>
+        <label><input type="radio" name="radio02" value="ラジオボタン02_01" checked="checked">ラジオボタン02_01</label>
+        <label><input type="radio" name="radio02" value="ラジオボタン02_02">ラジオボタン02_02</label>
+        <label><input type="radio" name="radio02" value="ラジオボタン02_03">ラジオボタン02_03</label>
+      </div>
+
+      <div class="form-group">
+        <h2 class="h4">チェックボックス01</h2>
+        <input type="hidden" name="checkbox" value=""><!-- チェックボックス未選択時の対応 注意…name属性は配列ではない -->
+        <label><input type="checkbox" name="checkbox[]" value="チェックボックス01_01">チェックボックス01_01</label>
+        <label><input type="checkbox" name="checkbox[]" value="チェックボックス01_02">チェックボックス01_02</label>
+        <label><input type="checkbox" name="checkbox[]" value="チェックボックス01_03">チェックボックス01_03</label>
+      </div>
+      <div class="form-group">
+        <h2 class="h4">チェックボックス02</h2>
+        <input type="hidden" name="checkbox" value=""><!-- チェックボックス未選択時の対応 注意…name属性は配列ではない -->
+        <label><input type="checkbox" name="checkbox[]" value="チェックボックス02_01">チェックボックス02_01</label>
+        <label><input type="checkbox" name="checkbox[]" value="チェックボックス02_02">チェックボックス02_02</label>
+        <label><input type="checkbox" name="checkbox[]" value="チェックボックス02_03">チェックボックス02_03</label>
+      </div>
+
+      <div class="form-group">
+        <h2 class="h4">テキストエリア</h2>
+        <textarea name="body" class="form-control" rows="3"></textarea>
+      </div>
+
+      <button type="reset" class="btn btn-default">リセット</button>
+      <button type="submit" class="btn btn-default">確認する</button>
+    </form>
+  </div>
+</body>
+</html>
