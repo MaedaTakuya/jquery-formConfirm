@@ -9,6 +9,9 @@ Form内容をサーバーに送る前に、クライアント側で確認画面�
 
 *This software is released under the MIT License, see LICENSE.md.*
 
+##サンプルコード
+[demo](http://maedatakuya.github.io/jquery-formConfirm/example.html)
+
 ##使い方
 * jQuery本体と、[jquery.formConfirm.js]を読み込みます。
 * 要素をセレクタで指定して実行  
